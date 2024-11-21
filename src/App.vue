@@ -1,5 +1,5 @@
 <script setup>
-import Component from "./components/Footer.vue";
+import Component from "./components/ModalFrame.vue";
 </script>
 
 <template>

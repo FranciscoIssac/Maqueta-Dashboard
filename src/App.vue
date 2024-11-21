@@ -6,18 +6,46 @@ import Header from "./components/Header.vue";
 import Component1 from "./components/Component1.vue";
 import Tablero from "./components/Tablero.vue";
 
+import MailIcon from "./components/icons/Mail.vue";
+import BellIcon from "./components/icons/Bell.vue";
+import PersonIcon from "./components/icons/Person.vue";
 import DownloadButton from "./components/DownloadButton.vue";
 import EvaluateButton from "./components/EvaluateButton.vue";
 import AcceptButton from "./components/AcceptButton.vue";
 import CancelButton from "./components/CancelButton.vue";
 import CustomButton from "./components/CustomButton.vue";
 import UserButton from "./components/UserButton.vue";
-import MailIcon from "./components/icons/Mail.vue";
-import BellIcon from "./components/icons/Bell.vue";
-import PersonIcon from "./components/icons/Person.vue";
-
+import TextArea from "./components/TextArea.vue";
+import EvidenceDisplay from "./components/EvidenceDisplay.vue";
+import CustomInput from "./components/CustomInput.vue";
+import ProgressBar from "./components/ProgressBar.vue";
+import FileInput from "./components/FileInput.vue";
 
 </script>
+
+<!-- <template>
+  <FileInput></FileInput>
+</template> -->
+
+<!-- <template>
+  <ProgressBar progress="25"></ProgressBar>
+</template> -->
+
+<!-- <template>
+  <CustomInput placeholder="Buscar">
+  </CustomInput>
+</template> -->
+
+<!-- <template>
+  <EvidenceDisplay description="Ejemplo">
+  </EvidenceDisplay>
+</template> -->
+
+<!-- <template>
+  <TextArea text="Comentarios" height="112">
+
+  </TextArea>
+</template> -->
 
 <!-- <template>
   <Counter></Counter>
@@ -50,33 +78,13 @@ import PersonIcon from "./components/icons/Person.vue";
 
 <template>
   <div>
-    <CustomButton
-    text=""
-      backgroundColor="#004A98"
-      width="100"
-      height="40"/>
+      <CustomButton variant="default" width="250px">Default Button</CustomButton>
 
-    <!-- <CustomButton 
-      text="Aceptar" 
-      backgroundColor="#004A98" 
-      width="206" 
-      height="50"
-    /> -->
+      <CustomButton variant="default" :disabled="true" width="300px">Disabled Default</CustomButton>
 
-    <!-- <CustomButton 
-      text="Cancelar" 
-      backgroundColor="#00B2E3" 
-      width="206" 
-      height="50"
-    /> -->
+      <CustomButton variant="alternative" width="300px">Alternative Button</CustomButton>
 
-    <!-- <CustomButton 
-      text="Descargar" 
-      backgroundColor="#004A98" 
-      width="200" 
-      height="50"
-    /> -->
-
+      <CustomButton variant="alternative" :disabled="true" width="300px">Disabled Alternative</CustomButton>
   </div>
 </template>
 

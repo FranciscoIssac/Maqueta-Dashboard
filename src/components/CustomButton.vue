@@ -1,60 +1,81 @@
 <template>
-    <button :class="buttonClass"
-        :style="{ backgroundColor: backgroundColor, width: width + 'px', height: height + 'px', color: color }">
-        <span>{{ text }}</span>
-        <slot></slot>
+    <button :class="['custom-button', variantClass]" :style="{ width: width }" :disabled="disabled"
+        @mouseover="isHover = true" @mouseleave="isHover = false">
+        <slot />
     </button>
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { ref, computed, defineProps } from 'vue';
 
-defineProps({
-    text: {
+const props = defineProps({
+    variant: {
         type: String,
-        default: "Button",
-    },
-    backgroundColor: {
-        type: String,
-        default: "#004A98",
-    },
-    color: {
-        type: String,
-        default: "white",
+        default: 'default',
     },
     width: {
-        type: Number,
-        default: 200,
-    },
-    height: {
-        type: Number,
-        default: 50,
-    },
-    buttonClass: {
         type: String,
-        default: "",
+        default: '200px'
     },
+    disabled: {
+        type: Boolean,
+        default: false
+    }
+});
+
+const isHover = ref(false);
+
+const variantClass = computed(() => {
+    if (props.disabled) {
+        return props.variant === 'alternative' ? 'alt-disabled' : 'default-disabled';
+    } else if (isHover.value) {
+        return props.variant === 'alternative' ? 'alt-hover' : 'default-hover';
+    } else {
+        return props.variant === 'alternative' ? 'alt' : 'default';
+    }
 });
 </script>
 
 <style scoped>
-button {
+.custom-button {
+    color: #FFF;
+    text-align: center;
+
     font-family: "Open Sans";
     font-size: 20px;
+    font-style: normal;
     font-weight: 700;
     line-height: normal;
+    padding: 10px 20px;
     border: none;
     border-radius: 24px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 0 12px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    filter: brightness(0.9);
+.default {
+    background-color: #004A98;
+}
+
+.default-hover {
+    background-color: #002043;
+}
+
+.default-disabled {
+    background-color: #5B7897;
+    cursor: not-allowed;
+}
+
+.alt {
+    background-color: #00B2E3;
+}
+
+.alt-hover {
+    background-color: #005971;
+}
+
+.alt-disabled {
+    background-color: #9BD4E4;
+    cursor: not-allowed;
 }
 </style>

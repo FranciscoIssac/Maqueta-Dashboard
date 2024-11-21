@@ -20,8 +20,13 @@ import EvidenceDisplay from "./components/EvidenceDisplay.vue";
 import CustomInput from "./components/CustomInput.vue";
 import ProgressBar from "./components/ProgressBar.vue";
 import FileInput from "./components/FileInput.vue";
+import Calendar from "./components/Calendar.vue";
 
 </script>
+
+<template>
+  <Calendar></Calendar>
+</template>
 
 <!-- <template>
   <FileInput></FileInput>
@@ -76,7 +81,7 @@ import FileInput from "./components/FileInput.vue";
   </UserButton>
 </template> -->
 
-<template>
+<!-- <template>
   <div>
       <CustomButton variant="default" width="250px">Default Button</CustomButton>
 
@@ -86,7 +91,7 @@ import FileInput from "./components/FileInput.vue";
 
       <CustomButton variant="alternative" :disabled="true" width="300px">Disabled Alternative</CustomButton>
   </div>
-</template>
+</template> -->
 
 
 <style scoped></style>

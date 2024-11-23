@@ -26,11 +26,14 @@
   display: flex;
   padding: 5px;
   align-items: center;
-  color: #fff;
+  color: black;
   font-family: "Open Sans";
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  & svg {
+    width: 20px;
+  }
 }
 </style>

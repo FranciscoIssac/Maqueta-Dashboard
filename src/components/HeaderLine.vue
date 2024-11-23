@@ -14,7 +14,7 @@
 <style>
 .headerline-container {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 40px;
 }
 .headerline-blue {
@@ -27,6 +27,7 @@
   background-color: #ffc600;
   width: 50%;
   height: 100%;
+  line-height: normal;
   & p {
     position: absolute;
     right: 0;
@@ -44,13 +45,27 @@
     line-height: normal;
     padding-right: 20px;
   }
-
-  line-height: normal;
   & .triangle {
     width: 5%;
     height: 100%;
     background-color: #004a98;
     clip-path: polygon(0% 100%, 50% 50%, 0% 0%);
+  }
+}
+
+@media (max-width: 768px) {
+  .headerline-container {
+    height: 20px;
+  }
+  .headerline-blue {
+    width: 25%;
+  }
+  .headerline-yellow {
+    width: 75%;
+    & p {
+      font-size: 9px;
+      padding-right: 10px;
+    }
   }
 }
 </style>

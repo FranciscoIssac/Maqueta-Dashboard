@@ -15,7 +15,7 @@ import Mail from "./components/icons/Mail.vue";
   </div>
 
   <div id="sub-header">
-    <TestBread>
+    <TestBread id="testbread">
       <template #first>inicio</template>
       <template #second>inicio</template>
     </TestBread>
@@ -41,9 +41,18 @@ import Mail from "./components/icons/Mail.vue";
   border-bottom: 2px double black;
   & #user {
     display: flex;
-    width: 22%;
+    gap: 1em;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #sub-header {
+    margin: auto;
+    & #testbread {
+      display: none;
+    }
   }
 }
 </style>

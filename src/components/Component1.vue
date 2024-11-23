@@ -17,6 +17,7 @@
   display: flex;
   width: 100%;
   padding: 20px 25px;
+  /* flex: 1; */
 }
 
 hr {

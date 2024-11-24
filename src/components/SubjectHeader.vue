@@ -2,8 +2,8 @@
 
 <template>
   <div class="subject-header">
-    <h2>Materia</h2>
-    <h3>Información</h3>
+    <h2><slot name="materia"></slot><slot/></h2>
+    <h3><slot name="descripcion"/></h3>
   </div>
 </template>
 

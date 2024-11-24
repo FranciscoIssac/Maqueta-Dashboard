@@ -1,5 +1,5 @@
 <template>
-    <input type="text" :placeholder="placeholder" class="custom-input" />
+    <textarea type="text" :placeholder="placeholder" class="custom-input" />
 </template>
 
 <script setup>
@@ -13,18 +13,25 @@ defineProps({
 </script>
 
 <style scoped>
+.custom-input::placeholder {
+    color: #838383;
+}
+
 .custom-input {
+    resize: none;
     display: flex;
     width: 457px;
-    height: 44px;
+    height: 50px;
     padding: 8px 4px;
-    align-items: center;
+    align-items: flex-start;
+    vertical-align: top;
     gap: 10px;
+    flex-shrink: 0;
     border: 1px solid var(--TextBox, rgba(131, 131, 131, 0.25));
-    background: var(--TextBox, rgba(131, 131, 131, 0.25));
+    background: rgba(255, 255, 255, 0.50);
 
 
-    color: var(--EditableText, rgba(131, 131, 131, 0.50));
+    color: #838383;
 
     font-family: "Open Sans";
     font-size: 20px;

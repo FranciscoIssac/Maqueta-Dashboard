@@ -23,7 +23,7 @@ import Footer from "@/components/Footer.vue";
 
         <div id="sub-header">
             <TestBread>
-                <template #first>inicio</template>
+                <template #first>Inicio</template>
                 <template #second>Creación de Asignaciones</template>
             </TestBread>
             <div id="user">

@@ -1,11 +1,20 @@
-<script setup></script>
+<script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  height: {
+    type: String,
+    default: '351px'
+  }
+});
+</script>
 
 <template>
   <div class="tablero-container">
     <div class="tablero-header">
       <slot name="tablero-header"></slot>
     </div>
-    <div class="tablero-body">
+    <div class="tablero-body" :style="{ minHeight: props.height }">
       <ul>
         <li>
           Inicio
@@ -89,7 +98,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  min-height: 351px;
 }
 li {
   margin-bottom: 10px;

@@ -1,14 +1,14 @@
 <script setup>
-import Button from "./AcceptButton.vue";
+import Button from "./CustomButton.vue";
 </script>
 
 <template>
   <div class="subject-card">
-    <div>Materia</div>
+    <div><slot name="materia"></slot></div>
     <section>
-      Información
+      <slot name="descripcion"></slot>
       <container class="subject-button">
-        <Button></Button>
+        <Button width="184.608px">Ver más</Button>
       </container>
     </section>
   </div>
@@ -21,7 +21,7 @@ import Button from "./AcceptButton.vue";
   background-color: #5b7897;
   padding: 0 10px;
   width: 100%;
-  min-height: 240px;
+  min-height: 141px;
   & div {
     overflow: hidden;
     color: #fff;

@@ -18,8 +18,8 @@ defineProps({
 <style scoped>
 .evidence-card {
     display: flex;
-    width: 363px;
-    height: 359px;
+    width: 115px;
+    height: 171px;
     padding: 94px 124px;
     justify-content: center;
     align-items: center;

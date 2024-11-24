@@ -22,8 +22,13 @@
     height: 110px;
     background-color: #004a98;
     & h3 {
-      font-family: "Open Sans";
       margin: 10px;
+      color: var(--TextNormal, #fff);
+      font-family: "Open Sans";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
     }
   }
 }

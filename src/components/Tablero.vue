@@ -46,7 +46,7 @@ const props = defineProps({
                 />
               </svg>
               <ul>
-                <li>Detalles</li>
+                <li style="margin-top: 10px">Detalles</li>
               </ul>
             </li>
             <li>
@@ -106,6 +106,7 @@ const props = defineProps({
 }
 li {
   margin-bottom: 10px;
+  margin-left: 1em;
 }
 svg {
   width: 20px;

@@ -1,9 +1,13 @@
 <script setup>
-import ListaEvidencia from "./components/ListaEvidencia.vue";
+import Entrega from "./components/Entrega.vue";
+import StudentInfo from "./components/StudentInfo.vue";
 </script>
 
 <template>
-  <ListaEvidencia></ListaEvidencia>
+  <!-- <Entrega></Entrega> -->
+  <StudentInfo>
+    <template #studentName>Diego Israel Loredo Rodriguez</template>
+  </StudentInfo>
 </template>
 
 <style scoped></style>

@@ -69,8 +69,9 @@
 <style>
 .calendarioResumen-container {
   background-color: white;
+  border: 2px solid #000;
   width: 100%;
-  max-width: 840px;
+  max-width: 841px;
 }
 .calendarioResumen-header {
   display: flex;

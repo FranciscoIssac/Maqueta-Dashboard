@@ -48,5 +48,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  & svg {
+    width: 20px;
+  }
 }
 </style>

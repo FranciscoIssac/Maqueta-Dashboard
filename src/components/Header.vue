@@ -16,6 +16,7 @@ import Component1 from "./Component1.vue";
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 #container {
   display: flex;
@@ -29,5 +30,25 @@ import Component1 from "./Component1.vue";
   color: white;
   align-items: center;
   padding: 0 20px;
+  flex: 1; /* Supose to allow the div grow */
+}
+img {
+  max-width: 100%;
+  height: auto;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  #container {
+    height: 59.241px;
+  }
+  #portal-profesor > h2 {
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+  }
 }
 </style>

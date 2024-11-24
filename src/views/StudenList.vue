@@ -6,11 +6,11 @@ import HeaderLine from "../components/HeaderLine.vue";
 import TestBread from "../components/TestBread.vue";
 import UserButton from "../components/UserButton.vue";
 import Tablero from "@/components/Tablero.vue";
-import CustomInput from "@/components/CustomInput.vue";
-import TextArea from "@/components/TextArea.vue";
-import CustomButton from "@/components/CustomButton.vue";
-import EvidenceDisplay from "@/components/EvidenceDisplay.vue";
 import Footer from "@/components/Footer.vue";
+import SubjectHeader from "@/components/SubjectHeader.vue";
+import SubjectCard from "@/components/SubjectCard.vue";
+import CalendarioResumen from "@/components/CalendarioResumen.vue";
+import ListaEvidencia from "@/components/ListaEvidencia.vue";
 </script>
 
 <template>
@@ -24,7 +24,7 @@ import Footer from "@/components/Footer.vue";
     <div id="sub-header">
       <TestBread>
         <template #first>Inicio</template>
-        <template #second>Creación de Asignaciones</template>
+        <template #second>Alumnos</template>
       </TestBread>
       <div id="user">
         <Mail></Mail>
@@ -40,30 +40,10 @@ import Footer from "@/components/Footer.vue";
         <Tablero id="tablero">
           <template #header-title>Guia</template>
         </Tablero>
-        <div style="display: flex; flex-direction: column">
-          <h1 id="title">Subir material</h1>
-          <div style="display: flex">
-            <div style="display: block">
-              <p>Materia / Grupo / Tema</p>
-              <TextArea
-                id="textarea"
-                text="Descripción"
-                height="128"
-              ></TextArea>
-              <CustomInput
-                id="input"
-                placeholder="Ingresa el archivo aquí"
-              ></CustomInput>
-              <div>
-                <CustomButton variant="alternative" width="206px"
-                  >Cancelar</CustomButton
-                >
-                <CustomButton id="guardar-button" width="206px"
-                  >Guardar</CustomButton
-                >
-              </div>
-            </div>
-            <EvidenceDisplay id="evidence"></EvidenceDisplay>
+        <div id="right-content" style="display: flex; flex-direction: column">
+          <div style="display: block">
+            <h1 id="title" style="margin-top: -7px">Gestionar alumnos</h1>
+            <ListaEvidencia></ListaEvidencia>
           </div>
         </div>
       </div>
@@ -75,43 +55,23 @@ import Footer from "@/components/Footer.vue";
 </template>
 
 <style scoped>
-#evidence {
-  margin-left: 20px;
+#right-content {
+  width: 825px;
 }
 
 #tablero {
-  margin-right: 20px;
-}
-
-#guardar-button {
-  margin-left: 47px;
-}
-
-#input {
-  margin-bottom: 30px;
-}
-
-#textarea {
-  margin-top: 9px;
-  margin-bottom: 24px;
-}
-
-p,
-#title {
-  color: rgba(0, 0, 0, 0.8);
-  height: 27px;
-  font-family: "Open Sans";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  margin-right: 18px;
+  height: 665px;
 }
 
 #title {
   color: #000;
   height: 44px;
-
+  font-family: "Open Sans";
   font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 #content {

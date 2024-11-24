@@ -1,9 +1,9 @@
 <script setup>
-import Component from "./components/ModalFrame.vue";
+import ListaEvidencia from "./components/ListaEvidencia.vue";
 </script>
 
 <template>
-  <Component></Component>
+  <ListaEvidencia></ListaEvidencia>
 </template>
 
 <style scoped></style>

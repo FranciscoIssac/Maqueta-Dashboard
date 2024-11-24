@@ -1,18 +1,18 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps } from "vue";
 
 const props = defineProps({
   height: {
     type: String,
-    default: '351px'
-  }
+    default: "351px",
+  },
 });
 </script>
 
 <template>
   <div class="tablero-container">
     <div class="tablero-header">
-      <slot name="tablero-header"></slot>
+      <slot name="header-title"></slot>
     </div>
     <div class="tablero-body" :style="{ minHeight: props.height }">
       <ul>
@@ -87,6 +87,8 @@ const props = defineProps({
   font-weight: 400;
   color: #fff;
   padding: 0 10px;
+  align-content: center;
+  height: 2em;
 }
 .tablero-body {
   background-color: #9bd4e4;
@@ -98,6 +100,9 @@ const props = defineProps({
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  & ul {
+    list-style: none;
+  }
 }
 li {
   margin-bottom: 10px;

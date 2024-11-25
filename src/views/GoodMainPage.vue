@@ -42,6 +42,7 @@ import CalendarioResumen from "@/components/CalendarioResumen.vue";
           <div style="display: block">
             <h1 id="title" style="margin-top: -7px">Subir material</h1>
             <CalendarioResumen
+              id="calendarioresumen"
               style="
                 width: 841px;
                 height: 208px;
@@ -85,62 +86,147 @@ import CalendarioResumen from "@/components/CalendarioResumen.vue";
 </template>
 
 <style scoped>
-#right-content {
-  width: 825px;
-}
+@media (min-width: 1024px) {
+  #right-content {
+    width: 825px;
+  }
 
-#tablero {
-  margin-right: 18px;
-  height: 665px;
-}
+  #tablero {
+    margin-right: 18px;
+    height: 665px;
+  }
 
-#title {
-  color: #000;
-  height: 44px;
-  font-family: "Open Sans";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+  #title {
+    color: #000;
+    height: 44px;
+    font-family: "Open Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 
-#content {
-  display: flex;
-  padding: 16px 102px 80px 101px;
-  justify-content: center;
-  align-items: center;
-  background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
-}
-
-#header > .space {
-  height: 20px;
-  width: 100%;
-}
-
-#sub-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 40px;
-  border-bottom: 2px double black;
-
-  & #user {
+  #content {
     display: flex;
-    width: 22%;
-    justify-content: space-between;
+    padding: 16px 102px 80px 101px;
+    justify-content: center;
     align-items: center;
+    background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
+  }
+
+  #header > .space {
+    height: 20px;
+    width: 100%;
+  }
+
+  #sub-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    border-bottom: 2px double black;
+
+    & #user {
+      display: flex;
+      width: 22%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  #backgorund {
+    background: var(
+      --Background,
+      linear-gradient(180deg, #bec7d3 0%, #fff 50%)
+    );
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  #right-content {
+    width: max-content;
+  }
+  #calendarioresumen {
+    display: none;
+  }
+  #tablero {
+    display: none;
+  }
 
+  #title {
+    display: none;
+  }
+
+  #content {
+    display: flex;
+    padding: 16px 102px 80px 101px;
+    justify-content: center;
+    align-items: center;
+    background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
+  }
+
+  #header > .space {
+    height: 20px;
+    width: 100%;
+  }
+
+  #sub-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    border-bottom: 2px double black;
+
+    & #user {
+      display: flex;
+      width: 22%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  #backgorund {
+    background: var(
+      --Background,
+      linear-gradient(180deg, #bec7d3 0%, #fff 50%)
+    );
+  }
+}
 @media (max-width: 768px) {
+  #right-content {
+    width: max-content;
+  }
+
+  #calendarioresumen {
+    display: none;
+  }
+  #tablero {
+    display: none;
+  }
+
+  #title {
+    display: none;
+  }
+
+  #content {
+    display: flex;
+    padding: 16px 102px 80px 101px;
+    justify-content: center;
+    align-items: center;
+    background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
+  }
+
+  #header > .space {
+    height: 20px;
+    width: 100%;
+  }
+
+  #backgorund {
+    background: var(
+      --Background,
+      linear-gradient(180deg, #bec7d3 0%, #fff 50%)
+    );
+  }
   #sub-header {
     margin: auto;
     & #testbread {
       display: none;
     }
   }
-}
-
-#backgorund {
-  background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 50%));
 }
 </style>

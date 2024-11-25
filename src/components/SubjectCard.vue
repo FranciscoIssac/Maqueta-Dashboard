@@ -27,7 +27,7 @@ import Button from "./CustomButton.vue";
     color: #fff;
     text-overflow: ellipsis;
     font-family: "Open Sans";
-    font-size: 20px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -38,7 +38,7 @@ import Button from "./CustomButton.vue";
   & section {
     color: #fff;
     font-family: "Open Sans";
-    font-size: 20px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

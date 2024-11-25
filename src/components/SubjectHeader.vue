@@ -2,8 +2,8 @@
 
 <template>
   <div class="subject-header">
-    <h2><slot name="materia"></slot><slot/></h2>
-    <h3><slot name="descripcion"/></h3>
+    <h2><slot name="materia"></slot></h2>
+    <h3><slot name="descripcion"></slot></h3>
   </div>
 </template>
 
@@ -20,7 +20,7 @@
     color: #fff;
     text-overflow: ellipsis;
     font-family: "Open Sans";
-    font-size: 20px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -31,7 +31,7 @@
   & h3 {
     color: #fff;
     font-family: "Open Sans";
-    font-size: 20px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

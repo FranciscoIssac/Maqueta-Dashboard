@@ -1,9 +1,9 @@
 <script setup>
-import ListaEvidencia from "./components/ListaEvidencia.vue";
+import Calendar from "./components/Calendar.vue";
 </script>
 
 <template>
-  <ListaEvidencia></ListaEvidencia>
+  <Calendar></Calendar>
 </template>
 
 <style scoped></style>

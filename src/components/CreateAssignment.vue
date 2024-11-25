@@ -4,8 +4,9 @@ import CustomButton from "./CustomButton.vue";
 </script>
 
 <template>
-    <div class="dialog-container">
-        <div class="close-button">
+    <div id="modal-background">
+        <div id="modal" class="dialog-container">
+        <div class="close-button" @click="$emit('close')">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M1 1L11.75 11.75M22.5 22.5L11.75 11.75M11.75 11.75L22.5 1L1 22.5" stroke="white"
                     stroke-width="2" />
@@ -40,9 +41,29 @@ import CustomButton from "./CustomButton.vue";
 
         </div>
     </div>
+    </div>
 </template>
 
 <style scoped>
+#modal {
+    /* background: white;
+    padding: 20px;
+    border-radius: 8px; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .dialog-container {
     position: relative;
     width: 771px;

@@ -48,7 +48,7 @@ import Footer from "@/components/Footer.vue";
               <TextArea
                 id="textarea"
                 text="Descripción"
-                height="128"
+                height="144"
               ></TextArea>
               <CustomInput
                 id="input"

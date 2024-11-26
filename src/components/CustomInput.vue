@@ -21,10 +21,9 @@ defineProps({
     resize: none;
     display: flex;
     width: 457px;
-    height: 50px;
+    height: 66px;
     padding: 8px 4px;
     align-items: flex-start;
-    vertical-align: top;
     gap: 10px;
     flex-shrink: 0;
     border: 1px solid var(--TextBox, rgba(131, 131, 131, 0.25));

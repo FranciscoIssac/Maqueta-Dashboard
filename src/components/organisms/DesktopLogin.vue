@@ -1,5 +1,11 @@
 <script setup>
 import Button from "../AcceptButton.vue";
+import { ref } from "vue";
+
+const goToGoodMainPage = (event) => {
+  event.preventDefault();
+  window.location.href = "/goodmainpage.html";
+};
 </script>
 
 <template>
@@ -11,7 +17,7 @@ import Button from "../AcceptButton.vue";
     </div>
     <div id="button">
       <h2>Ingresa al sistema</h2>
-      <Button></Button>
+      <Button @click="goToGoodMainPage"></Button>
     </div>
   </div>
 </template>

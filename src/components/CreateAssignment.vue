@@ -1,46 +1,57 @@
 <script setup>
 import Calendar from "./Calendarv2.vue";
 import CustomButton from "./CustomButton.vue";
+
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
+const irSubirMaterial = () => {
+    router.push('/material')
+}
 </script>
 
 <template>
     <div id="modal-background">
         <div id="modal" class="dialog-container">
-        <div class="close-button" @click="$emit('close')">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M1 1L11.75 11.75M22.5 22.5L11.75 11.75M11.75 11.75L22.5 1L1 22.5" stroke="white"
-                    stroke-width="2" />
-            </svg>
-        </div>
-        <div class="content">
-            <textarea class="description-input" placeholder="Agrega descripción" v-model="description"></textarea>
-            <div class="down-content">
-
-                <div class="calendar-container">
-                    <label class="calendar-label">Fecha de entrega</label>
-                    <Calendar id="calendar"></Calendar>
-                </div>
-
-                <div class="buttons">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" style="margin-right: 13px;">
-                        <path
-                            d="M17 1H3C1.89543 1 1 1.89543 1 3V17C1 18.1046 1.89543 19 3 19H17C18.1046 19 19 18.1046 19 17V3C19 1.89543 18.1046 1 17 1Z"
-                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M2.5 4C3.32843 4 4 3.32843 4 2.5C4 1.67157 3.32843 1 2.5 1C1.67157 1 1 1.67157 1 2.5C1 3.32843 1.67157 4 2.5 4Z"
-                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            transform="translate(4, 4)" />
-                        <path d="M17 6L12 1L1 12" stroke="white" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" transform="translate(3, 7)" />
-                    </svg>
-                    <CustomButton width="155px">Aceptar</CustomButton>
-                    <CustomButton variant="alternative" width="155px" style="margin-left: 33px; margin-top: 7px;">Cancelar</CustomButton>
-                </div>
+            <div class="close-button" @click="$emit('close')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M1 1L11.75 11.75M22.5 22.5L11.75 11.75M11.75 11.75L22.5 1L1 22.5" stroke="white"
+                        stroke-width="2" />
+                </svg>
             </div>
+            <div class="content">
+                <textarea class="description-input" placeholder="Agrega descripción" v-model="description"></textarea>
+                <div class="down-content">
+
+                    <div class="calendar-container">
+                        <label class="calendar-label">Fecha de entrega</label>
+                        <Calendar id="calendar"></Calendar>
+                    </div>
+
+                    <div class="buttons">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            style="margin-right: 13px;">
+                            <path
+                                d="M17 1H3C1.89543 1 1 1.89543 1 3V17C1 18.1046 1.89543 19 3 19H17C18.1046 19 19 18.1046 19 17V3C19 1.89543 18.1046 1 17 1Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M2.5 4C3.32843 4 4 3.32843 4 2.5C4 1.67157 3.32843 1 2.5 1C1.67157 1 1 1.67157 1 2.5C1 3.32843 1.67157 4 2.5 4Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                transform="translate(4, 4)" />
+                            <path d="M17 6L12 1L1 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" transform="translate(3, 7)" />
+                        </svg>
+                        <CustomButton @click="irSubirMaterial" width="155px">Aceptar</CustomButton>
+                        <CustomButton @click="$emit('close')" variant="alternative" width="155px"
+                            style="margin-left: 33px; margin-top: 7px;">
+                            Cancelar</CustomButton>
+                    </div>
+                </div>
 
 
+            </div>
         </div>
-    </div>
     </div>
 </template>
 

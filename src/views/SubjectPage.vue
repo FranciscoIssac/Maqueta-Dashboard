@@ -15,6 +15,14 @@ import CreateAssignment from "../components/CreateAssignment.vue";
 
 import { ref } from "vue";
 const isModalOpen = ref(false);
+
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const irStudentList = () => {
+    router.push('/students')
+}
 </script>
 
 <template>
@@ -51,7 +59,10 @@ const isModalOpen = ref(false);
                         <StudentInfo>
                             <template #studentName>Diego Israel Loredo Rodriguez</template>
                         </StudentInfo>
-                        <CustomButton width="200px" style="margin-top: 9.08px; margin-left: 90px;">Expandir</CustomButton>
+                        <CustomButton @click="irStudentList" width="200px"
+                            style="margin-top: 9.08px; margin-left: 90px;">
+                            Expandir
+                        </CustomButton>
                     </div>
                     <Entrega />
                 </div>

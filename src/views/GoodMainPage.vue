@@ -10,6 +10,15 @@ import Footer from "@/components/Footer.vue";
 import SubjectHeader from "@/components/SubjectHeader.vue";
 import SubjectCard from "@/components/SubjectCard.vue";
 import CalendarioResumen from "@/components/CalendarioResumen.vue";
+import CustomButton from "@/components/CustomButton.vue";
+
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const irSubjectPage = () => {
+  router.push('/subject')
+}
 </script>
 
 <template>
@@ -27,7 +36,7 @@ import CalendarioResumen from "@/components/CalendarioResumen.vue";
       <div id="user">
         <Mail></Mail>
         <Bell></Bell>
-        <UserButton>
+        <UserButton @click="irSubjectPage">
           <template #user>Administrador</template>
         </UserButton>
       </div>
@@ -41,28 +50,27 @@ import CalendarioResumen from "@/components/CalendarioResumen.vue";
         <div id="right-content" style="display: flex; flex-direction: column">
           <div style="display: block">
             <h1 id="title" style="margin-top: -7px">Subir material</h1>
-            <CalendarioResumen
-              style="
+            <CalendarioResumen style="
                 width: 841px;
                 height: 208px;
                 margin-bottom: 35px;
                 margin-top: 18px;
-              "
-            >
+              ">
             </CalendarioResumen>
             <SubjectHeader style="height: 36px">
               <template #materia>Materia</template>
               <template #descripcion>Descripcion de la materia</template>
             </SubjectHeader>
-            <SubjectCard
-              style="margin-top: 10px; margin-bottom: 9px; height: 156px"
-            >
+            <SubjectCard style="margin-top: 10px; margin-bottom: 9px; height: 156px">
               <template #materia>Interfaces Gráficas</template>
               <template #descripcion>
                 No. Estudiantes - 22<br />
                 Hora clase - 11am<br />
                 Progreso - 50.2%<br />
                 Tema actual - Punteros
+              </template>
+              <template #button>
+                <CustomButton @click="irSubjectPage" width="184.608px">Ver más</CustomButton>
               </template>
             </SubjectCard>
             <SubjectCard style="height: 156px">
@@ -112,7 +120,7 @@ import CalendarioResumen from "@/components/CalendarioResumen.vue";
   background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
 }
 
-#header > .space {
+#header>.space {
   height: 20px;
   width: 100%;
 }
@@ -134,6 +142,7 @@ import CalendarioResumen from "@/components/CalendarioResumen.vue";
 @media (max-width: 768px) {
   #sub-header {
     margin: auto;
+
     & #testbread {
       display: none;
     }

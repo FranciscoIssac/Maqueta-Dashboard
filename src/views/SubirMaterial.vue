@@ -11,6 +11,14 @@ import TextArea from "@/components/TextArea.vue";
 import CustomButton from "@/components/CustomButton.vue";
 import EvidenceDisplay from "@/components/EvidenceDisplay.vue";
 import Footer from "@/components/Footer.vue";
+
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
+const irSubjectPage = () => {
+    router.push('/subject')
+}
 </script>
 
 <template>
@@ -29,7 +37,7 @@ import Footer from "@/components/Footer.vue";
       <div id="user">
         <Mail></Mail>
         <Bell></Bell>
-        <UserButton>
+        <UserButton @click="irSubjectPage">
           <template #user>Administrador</template>
         </UserButton>
       </div>

@@ -1,8 +1,16 @@
 <script setup>
-import Header from "../components/Header.vue";
-import HeaderLine from "../components/HeaderLine.vue";
+import Header from "@/components/Header.vue";
+import HeaderLine from "@/components/HeaderLine.vue";
 import Footer from "@/components/Footer.vue";
-import Button from "../components/AcceptButton.vue";
+import Button from "@/components/AcceptButton.vue";
+
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const irGoodMainPage = () => {
+  router.push('/main')
+}
 </script>
 
 <template>
@@ -22,7 +30,7 @@ import Button from "../components/AcceptButton.vue";
       </div>
       <div id="button">
         <h2>Ingresa al sistema</h2>
-        <Button></Button>
+        <Button @click="irGoodMainPage"></Button>
       </div>
     </div>
 
@@ -35,7 +43,7 @@ import Button from "../components/AcceptButton.vue";
 </template>
 
 <style scoped>
-#header > .space {
+#header>.space {
   height: 20px;
   width: 100%;
 }
@@ -46,6 +54,7 @@ import Button from "../components/AcceptButton.vue";
   grid-template-columns: 2, 1fr;
   grid-template-rows: repeat(2, 1fr);
   margin: 2em 25em;
+
   & h2 {
     grid-row: 1 / span 1;
     color: #000;
@@ -55,6 +64,7 @@ import Button from "../components/AcceptButton.vue";
     font-weight: 400;
     line-height: normal;
   }
+
   & #text {
     grid-row: 2 / span 1;
     color: #000;
@@ -64,6 +74,7 @@ import Button from "../components/AcceptButton.vue";
     font-weight: 400;
     line-height: normal;
   }
+
   & #button {
     grid-row: 1 / span 2;
     display: flex;

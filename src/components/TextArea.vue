@@ -19,13 +19,15 @@ defineProps({
 .text-area {
     display: flex;
     width: 457px;
+    height: 144px;
     padding: 8px 4px;
     align-items: flex-start;
     gap: 10px;
+    flex-shrink: 0;
     border: 1px solid var(--TextBox, rgba(131, 131, 131, 0.25));
     background: var(--TextBox, rgba(131, 131, 131, 0.25));
     resize: none;
-    
+
     color: var(--EditableText, rgba(131, 131, 131, 0.50));
     font-family: "Open Sans";
     font-size: 20px;

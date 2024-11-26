@@ -20,7 +20,9 @@ export default {
 <template>
   <div class="studentinfo-container">
     <div class="studentinfo-button" @click="toggleDropdown">
-      <h2><slot name="studentName"></slot></h2>
+      <h2>
+        <slot name="studentName"></slot>
+      </h2>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
@@ -48,34 +50,42 @@ export default {
 .studentinfo-container {
   background-color: #004a98;
   display: flex;
-  /* width: 399.676px; */
+  width: 384.90741px;
+  min-height: 61px;
   max-width: 399.676px;
   flex-direction: column;
   color: var(--TextNormal, #fff);
   border-radius: 8px;
+
   & :hover {
     cursor: pointer;
   }
 }
+
 .studentinfo-button {
   display: flex;
-  /* width: 399.676px; */
+  /* width: 384.90741px; */
   flex-direction: row;
   align-items: flex-start;
   border-radius: 8px;
+
   & h2 {
     padding-left: 5px;
+    padding-top: 20px;
+    color: #fff;
     font-family: Inter;
-    font-size: 18px;
+    font-size: 18.461px;
     font-style: normal;
-    font-weight: 100;
+    font-weight: 400;
     line-height: normal;
   }
+
   & svg {
+    margin-top: 15px;
     width: 2rem;
-    margin: auto 0;
   }
 }
+
 .studentinfo-content {
   /* padding-left: 5px; */
   margin: 0;
@@ -85,6 +95,7 @@ export default {
   font-weight: 100;
   line-height: normal;
   padding-bottom: 1em;
+
   & ul {
     list-style: none;
     margin: 0;
@@ -94,7 +105,9 @@ export default {
 
 /* esta clase es la asignada al chevron svg para poder rotar de forma fluida y correcta */
 .rotated {
-  transform: rotate(180deg); /* Rota el SVG 180 grados */
-  transition: transform 0.5s ease; /* Añade una transición suave */
+  transform: rotate(180deg);
+  /* Rota el SVG 180 grados */
+  transition: transform 0.5s ease;
+  /* Añade una transición suave */
 }
 </style>

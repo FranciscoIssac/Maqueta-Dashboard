@@ -51,8 +51,9 @@
 
   padding-top: 40px;
   padding-right: 40px;
+
   & tbody > tr > td {
-    color: var(--TextNormal, #fff);
+    color: #fff;
     font-family: Inter;
     font-size: 18.461px;
     font-style: normal;

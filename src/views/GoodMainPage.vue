@@ -38,7 +38,7 @@ import CalendarioResumen from "@/components/CalendarioResumen.vue";
 
     <div id="content">
       <div style="display: flex">
-        <Tablero id="tablero" height="665px">
+        <Tablero id="tablero" height="638px">
           <template #header-title>Guia</template>
         </Tablero>
         <div id="right-content" style="display: flex; flex-direction: column">

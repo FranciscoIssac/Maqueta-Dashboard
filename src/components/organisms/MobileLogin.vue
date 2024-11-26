@@ -1,5 +1,10 @@
 <script setup>
 import Button from "../AcceptButton.vue";
+
+const goToGoodMainPage = (event) => {
+  event.preventDefault();
+  window.location.href = "/goodmainpage.html";
+};
 </script>
 
 <template>
@@ -7,7 +12,7 @@ import Button from "../AcceptButton.vue";
     <h2>Ingresar al sistema:</h2>
     <input type="text" placeholder="Usuario" />
     <input type="password" placeholder="Contraseña" />
-    <Button></Button>
+    <Button @click="goToGoodMainPage"></Button>
   </div>
 </template>
 

@@ -1,17 +1,18 @@
 <template>
-  <button
-    :class="['custom-button', variantClass]"
-    :style="{ width: width }"
-    :disabled="disabled"
-    @mouseover="isHover = true"
-    @mouseleave="isHover = false"
-  >
-    <slot />
-  </button>
+    <button @click="handleClick" :class="['custom-button', variantClass]" :style="{ width: width }" :disabled="disabled"
+        @mouseover="isHover = true" @mouseleave="isHover = false">
+        <slot />
+    </button>
 </template>
 
 <script setup>
-import { ref, computed, defineProps } from "vue";
+import { ref, computed, defineProps } from 'vue';
+
+const emit = defineEmits(['click'])
+
+const handleClick = () => {
+    emit('click')
+}
 
 const props = defineProps({
   variant: {

@@ -11,6 +11,14 @@ import SubjectHeader from "@/components/SubjectHeader.vue";
 import SubjectCard from "@/components/SubjectCard.vue";
 import CalendarioResumen from "@/components/CalendarioResumen.vue";
 import ListaEvidencia from "@/components/ListaEvidencia.vue";
+
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const irSubjectPage = () => {
+  router.push('/subject')
+}
 </script>
 
 <template>
@@ -29,7 +37,7 @@ import ListaEvidencia from "@/components/ListaEvidencia.vue";
       <div id="user">
         <Mail></Mail>
         <Bell></Bell>
-        <UserButton>
+        <UserButton @click="irSubjectPage">
           <template #user>Administrador</template>
         </UserButton>
       </div>

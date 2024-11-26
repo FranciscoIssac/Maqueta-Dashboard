@@ -1,54 +1,7 @@
-<script>
-import Header from "./components/Header.vue";
-import HeaderLine from "./components/HeaderLine.vue";
-import Footer from "@/components/Footer.vue";
-import DesktopLogin from "./components/organisms/DesktopLogin.vue";
-import MobileLogin from "./components/organisms/MobileLogin.vue";
-
-export default {
-  components: {
-    DesktopLogin,
-    MobileLogin,
-    Header,
-    HeaderLine,
-    Footer,
-  },
-  data() {
-    return {
-      isDesktop: window.innerWidth >= 1024,
-    };
-  },
-  mounted() {
-    window.addEventListener("resize", this.handleResize);
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.handleResize);
-  },
-  methods: {
-    handleResize() {
-      this.isDesktop = window.innerWidth >= 1024;
-    },
-  },
-};
-</script>
+<script setup></script>
 
 <template>
-  <div id="background">
-    <div id="header">
-      <Header></Header>
-      <div class="space"></div>
-      <HeaderLine></HeaderLine>
-    </div>
-
-    <DesktopLogin v-if="isDesktop"></DesktopLogin>
-    <MobileLogin id="mobile" v-else></MobileLogin>
-
-    <div id="footer">
-      <Footer>
-        <template #text>Text</template>
-      </Footer>
-    </div>
-  </div>
+  <router-view></router-view>
 </template>
 
 <style scoped>

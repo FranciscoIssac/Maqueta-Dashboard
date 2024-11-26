@@ -11,6 +11,14 @@ import TextArea from "@/components/TextArea.vue";
 import CustomButton from "@/components/CustomButton.vue";
 import EvidenceDisplay from "@/components/EvidenceDisplay.vue";
 import Footer from "@/components/Footer.vue";
+
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
+const irSubjectPage = () => {
+    router.push('/subject')
+}
 </script>
 
 <!-- dentro de este template se puede ver como en algunos casos algunas secciones se
@@ -32,7 +40,7 @@ id header tiene dos compoentes lo que lo podria hacer una molecula -->
       <div id="user">
         <Mail></Mail>
         <Bell></Bell>
-        <UserButton>
+        <UserButton @click="irSubjectPage">
           <template #user>Administrador</template>
         </UserButton>
       </div>

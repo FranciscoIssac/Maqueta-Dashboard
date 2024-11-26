@@ -1,7 +1,7 @@
 <!-- dentro de este componente se tuvo que definir directamente el tamaño de un botton de mala manera pero con un tamaño fixed 
 tambien porque asi venia definido en figma -->
 <script setup>
-import Button from "./CustomButton.vue";
+import CustomButton from "./CustomButton.vue";
 </script>
 
 <template>
@@ -10,7 +10,9 @@ import Button from "./CustomButton.vue";
     <section>
       <slot name="descripcion"></slot>
       <container class="subject-button">
-        <Button width="184.608px">Ver más</Button>
+        <slot name="button">
+          <CustomButton width="184.608px">Ver más</CustomButton>
+        </slot>
       </container>
     </section>
   </div>
@@ -25,6 +27,7 @@ import Button from "./CustomButton.vue";
   padding: 0 10px;
   width: 100%;
   min-height: 141px;
+
   & div {
     overflow: hidden;
     color: #fff;
@@ -38,6 +41,7 @@ import Button from "./CustomButton.vue";
     border-right: 1px solid white;
     padding: 8px;
   }
+
   & section {
     color: #fff;
     font-family: "Open Sans";
@@ -48,6 +52,7 @@ import Button from "./CustomButton.vue";
     width: 66%;
     margin-left: 10px;
     padding: 8px;
+
     & .subject-button {
       position: absolute;
       bottom: 10px;

@@ -1,3 +1,5 @@
+<!-- este es un componente de apoyo utilizado para el header; este deberia dividirse
+en dos componentes de imagenes e inlcuirlo para ser una molecula pero no se hizo de esta manera para seguir el disño del sistema y ser lo mas fiable posible -->
 <script setup></script>
 
 <template>

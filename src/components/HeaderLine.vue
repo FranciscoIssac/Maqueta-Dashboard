@@ -1,3 +1,6 @@
+<!-- este componente va muy de la mano al del Header ya que es la linea que va por debajo,
+este dio problama al momento de definir el tamaño ya que conforme se hacia mas chico se 
+deformaba de forma poco conveniente -->
 <script setup></script>
 
 <template>
@@ -53,6 +56,7 @@
   }
 }
 
+/* se define mediaquery para poder contenerizar de forma correcta el tamaño de letra en dispositivos moviles */
 @media (max-width: 768px) {
   .headerline-container {
     height: 20px;

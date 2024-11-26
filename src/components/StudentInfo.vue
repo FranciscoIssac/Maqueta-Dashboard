@@ -1,12 +1,16 @@
+<!-- este componente ya utiliza reactividad ya que conforme tenga un estado se despliga el dropdown
+resulto muy util esta funcion de vue ya que hizo ver el codigo mas limpio y seccionado -->
 <script>
 export default {
   data() {
     return {
+      // se definio el estado del dropdwon al principio este no es visible
       isDropDownVisible: false,
     };
   },
   methods: {
     toggleDropdown() {
+      // este metodo permite realizar los cambios de visible a no visibles
       this.isDropDownVisible = !this.isDropDownVisible;
     },
   },
@@ -88,6 +92,7 @@ export default {
   }
 }
 
+/* esta clase es la asignada al chevron svg para poder rotar de forma fluida y correcta */
 .rotated {
   transform: rotate(180deg); /* Rota el SVG 180 grados */
   transition: transform 0.5s ease; /* Añade una transición suave */

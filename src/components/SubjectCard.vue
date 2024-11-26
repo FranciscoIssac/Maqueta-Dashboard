@@ -1,3 +1,5 @@
+<!-- dentro de este componente se tuvo que definir directamente el tamaño de un botton de mala manera pero con un tamaño fixed 
+tambien porque asi venia definido en figma -->
 <script setup>
 import Button from "./CustomButton.vue";
 </script>
@@ -15,6 +17,7 @@ import Button from "./CustomButton.vue";
 </template>
 
 <style>
+/* para hacerlo mas responsivo se opto por usar tamaños relativos como el .em y el .rem */
 .subject-card {
   display: flex;
   position: relative;

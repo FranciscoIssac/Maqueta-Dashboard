@@ -1,3 +1,4 @@
+<!-- para esta vista se importan todos estos componentes -->
 <script setup>
 import Bell from "../components/icons/Bell.vue";
 import Mail from "../components/icons/Mail.vue";
@@ -12,6 +13,8 @@ import SubjectCard from "@/components/SubjectCard.vue";
 import CalendarioResumen from "@/components/CalendarioResumen.vue";
 </script>
 
+<!-- dentro del template se define por bloques o por secciones las partes donde ira cada componente como un header, subheader, contenido  footer -->
+<!-- esta arquitectura aplica casi para todas las vistas -->
 <template>
   <div id="background">
     <div id="header">
@@ -86,6 +89,7 @@ import CalendarioResumen from "@/components/CalendarioResumen.vue";
 </template>
 
 <style scoped>
+/* esta vista es una de las cuales utiliza los mediaquerys para definir tres tipos de tamaños */
 @media (min-width: 1024px) {
   #right-content {
     width: 825px;

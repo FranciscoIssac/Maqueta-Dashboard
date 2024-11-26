@@ -1,3 +1,4 @@
+<!-- este componenente a diferencia del otro de calendario fue mas sencillo y fue igualmente sacadao del sistema de diseño -->
 <script setup></script>
 
 <template>

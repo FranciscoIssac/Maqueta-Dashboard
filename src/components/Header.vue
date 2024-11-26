@@ -1,3 +1,5 @@
+<!-- este mas que componente lo consideramos una molecula o un organizmo ya que se deberia de componer de moleculas pero no fue 
+dividido de esa manera por el diseño del sistema -->
 <script setup>
 import Component1 from "./Component1.vue";
 </script>
@@ -38,6 +40,8 @@ img {
   flex: 1;
 }
 
+/* apartir de aqui se definio un mediaquery esto debido a que el texo se comenzaba a hacer muy
+grande y se opto por utilizar valores de tipo fixed como el diseño del sistema */
 @media (max-width: 768px) {
   #container {
     height: 59.241px;

@@ -1,3 +1,5 @@
+<!-- este es el componente Entrega que es una tabla que esta definida en el diseño del sistema el cual sirve para mostrar datos de los alumnos en cuanto a entregas -->
+<!-- cabe aclarar que en este y en varios fue dificil definir tamaños ya que en figma marcaba unos totalmente distinto -->
 <script setup></script>
 
 <template>

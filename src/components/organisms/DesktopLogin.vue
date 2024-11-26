@@ -1,3 +1,5 @@
+<!-- Este componente fue creado con la finalidad de poder agregar responsividad a la vista de 
+ login ya que cambiaba en su estructura y en su estilo lo que implico crear este organismo a la par con el de MobileLogin -->
 <script setup>
 import Button from "../AcceptButton.vue";
 </script>
@@ -11,6 +13,7 @@ import Button from "../AcceptButton.vue";
     </div>
     <div id="button">
       <h2>Ingresa al sistema</h2>
+      <!-- se llama al componente botton el cual fue creado apartir del diseño del sistema -->
       <Button></Button>
     </div>
   </div>

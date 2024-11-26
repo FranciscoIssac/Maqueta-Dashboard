@@ -1,3 +1,6 @@
+<!-- este componente es uno de los mas interesantes ya que permite definir un tamaño
+fixed o estatico desde el componente padre esto resulta importante cuando en dos
+vistas como es el caso tiene dimenciones diferentes -->
 <script setup>
 import { defineProps } from "vue";
 

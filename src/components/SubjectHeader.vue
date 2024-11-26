@@ -1,3 +1,5 @@
+<!-- este componente va de la mano al subjectheader el cual tambien utiliza tamaños
+realtivos como porcentajes, .rem y .em -->
 <script setup></script>
 
 <template>

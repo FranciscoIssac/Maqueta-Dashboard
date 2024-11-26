@@ -13,6 +13,9 @@ import EvidenceDisplay from "@/components/EvidenceDisplay.vue";
 import Footer from "@/components/Footer.vue";
 </script>
 
+<!-- dentro de este template se puede ver como en algunos casos algunas secciones se
+podrian considerar como moleculas o como organizmos ya que como se puede ver el
+id header tiene dos compoentes lo que lo podria hacer una molecula -->
 <template>
   <div id="background">
     <div id="header">

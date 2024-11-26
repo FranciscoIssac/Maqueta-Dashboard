@@ -1,3 +1,5 @@
+<!-- el footer se hizo como componente como venia en el diseño del sistema, 
+asi mismo se creo para que reciba como parametro un texto o tenga  un espacio para que desde el componente padre se pudiera colocar texto -->
 <script setup></script>
 
 <template>

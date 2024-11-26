@@ -1,3 +1,5 @@
+<!-- este se iba a optar por hacerlo un organizmo ya que deberia tener componentes dentro mas sin embargo se siguio 
+lo establecido en el sistema de diseño -->
 <script setup></script>
 
 <template>

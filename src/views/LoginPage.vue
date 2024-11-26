@@ -1,3 +1,5 @@
+<!-- esta vista es algo especial ya que la estructura cambia un poco cuando es movil
+u ipad por lo que se tiene un comportamiento de componentes muy especial -->
 <script>
 import Header from "../components/Header.vue";
 import HeaderLine from "../components/HeaderLine.vue";

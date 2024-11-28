@@ -46,7 +46,7 @@ const irSubjectPage = () => {
     </div>
 
     <div id="content">
-      <div style="display: flex">
+      <div style="display: flex" id="subcontent">
         <Tablero id="tablero" height="638px">
           <template #header-title>Guia</template>
         </Tablero>
@@ -54,6 +54,7 @@ const irSubjectPage = () => {
           <div style="display: block">
             <h1 id="title" style="margin-top: -7px">Subir material</h1>
             <CalendarioResumen
+              id="calendarioresumen"
               style="
                 width: 841px;
                 height: 208px;
@@ -158,7 +159,8 @@ const irSubjectPage = () => {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   #right-content {
-    width: max-content;
+    /* width: max-content; */
+    width: 100%;
   }
   #calendarioresumen {
     display: none;
@@ -173,10 +175,13 @@ const irSubjectPage = () => {
 
   #content {
     display: flex;
-    padding: 16px 102px 80px 101px;
+    padding: 50px 0;
     justify-content: center;
     align-items: center;
     background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
+    & #subcontent {
+      width: 100%;
+    }
   }
 
   #header > .space {
@@ -189,7 +194,6 @@ const irSubjectPage = () => {
     justify-content: space-between;
     padding: 10px 40px;
     border-bottom: 2px double black;
-
     & #user {
       display: flex;
       width: 22%;
@@ -203,10 +207,13 @@ const irSubjectPage = () => {
       linear-gradient(180deg, #bec7d3 0%, #fff 50%)
     );
   }
+  #footer {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   #right-content {
-    width: max-content;
+    width: 100%;
   }
 
   #calendarioresumen {
@@ -222,10 +229,13 @@ const irSubjectPage = () => {
 
   #content {
     display: flex;
-    padding: 16px 102px 80px 101px;
+    padding: 50px 0;
     justify-content: center;
     align-items: center;
     background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
+    & #subcontent {
+      width: 100%;
+    }
   }
 
   #header > .space {
@@ -245,6 +255,9 @@ const irSubjectPage = () => {
     & #testbread {
       display: none;
     }
+  }
+  #footer {
+    display: none;
   }
 }
 </style>

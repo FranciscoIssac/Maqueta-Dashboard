@@ -12,13 +12,13 @@ import SubjectCard from "@/components/SubjectCard.vue";
 import CalendarioResumen from "@/components/CalendarioResumen.vue";
 import ListaEvidencia from "@/components/ListaEvidencia.vue";
 
-import { useRouter } from 'vue-router'
+import { useRouter } from "vue-router";
 
-const router = useRouter()
+const router = useRouter();
 
 const irSubjectPage = () => {
-  router.push('/subject')
-}
+  router.push("/subject");
+};
 </script>
 
 <template>
@@ -120,5 +120,10 @@ const irSubjectPage = () => {
 
 #backgorund {
   background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 50%));
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 </style>

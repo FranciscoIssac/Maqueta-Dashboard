@@ -42,7 +42,7 @@ deformaba de forma poco conveniente -->
     text-overflow: ellipsis;
     white-space: nowrap;
     font-family: Arial;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -55,7 +55,21 @@ deformaba de forma poco conveniente -->
     clip-path: polygon(0% 100%, 50% 50%, 0% 0%);
   }
 }
-
+@media (min-width: 768px) and (max-width: 1024px) {
+  .headerline-container {
+    height: 20px;
+  }
+  .headerline-blue {
+    width: 25%;
+  }
+  .headerline-yellow {
+    width: 75%;
+    & p {
+      font-size: 9px;
+      padding-right: 10px;
+    }
+  }
+}
 /* se define mediaquery para poder contenerizar de forma correcta el tamaño de letra en dispositivos moviles */
 @media (max-width: 768px) {
   .headerline-container {

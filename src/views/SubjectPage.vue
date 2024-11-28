@@ -168,6 +168,9 @@ const irStudentList = () => {
       display: none;
     }
   }
+  #footer {
+    display: none;
+  }
 }
 
 #backgorund {

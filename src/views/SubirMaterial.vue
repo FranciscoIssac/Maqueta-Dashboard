@@ -12,13 +12,13 @@ import CustomButton from "@/components/CustomButton.vue";
 import EvidenceDisplay from "@/components/EvidenceDisplay.vue";
 import Footer from "@/components/Footer.vue";
 
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 
-const router = useRouter()
+const router = useRouter();
 
 const irSubjectPage = () => {
-    router.push('/subject')
-}
+  router.push("/subject");
+};
 </script>
 
 <!-- dentro de este template se puede ver como en algunos casos algunas secciones se

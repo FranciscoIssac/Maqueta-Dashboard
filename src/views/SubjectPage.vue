@@ -34,14 +34,13 @@ const irStudentList = () => {
     </div>
 
     <div id="sub-header">
-      <TestBread>
+      <TestBread id="testbread">
         <template #first>Inicio</template>
-        <template #second>Detalle de la materia</template>
       </TestBread>
       <div id="user">
         <Mail></Mail>
         <Bell></Bell>
-        <UserButton>
+        <UserButton @click="irSubjectPage">
           <template #user>Administrador</template>
         </UserButton>
       </div>
@@ -72,95 +71,197 @@ const irStudentList = () => {
       </div>
       <div id="right-section">
         <Calendar />
-        <CustomButton width="207px" @click="isModalOpen = true"
+        <CustomButton
+          width="207px"
+          @click="isModalOpen = true"
+          id="create-assignament"
           >Crear asignación</CustomButton
         >
       </div>
     </div>
-
     <div id="footer">
       <Footer></Footer>
     </div>
-
     <CreateAssignment v-if="isModalOpen" @close="isModalOpen = false" />
   </div>
 </template>
 
 <style scoped>
-#title-container {
-  display: flex;
-  justify-content: center;
-  margin: 9.23px 0;
-}
-
-#title {
-  display: flex;
-  padding: 16.615px 24.922px;
-  align-items: center;
-  justify-content: center;
-  gap: 9.23px;
-  background: var(--Primary2, #002043);
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-size: 29.537px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  width: 1123px;
-}
-
-#content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0px 102px 9.23px 102px;
-  margin-left: 76px;
-  justify-content: center;
-  align-items: start;
-  background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
-}
-
-#left-section {
-  display: flex;
-  flex-direction: column;
-}
-
-#student-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 17px;
-  padding: 9.67px 0;
-  border-radius: 8px;
-  align-items: center;
-}
-
-#right-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-#header > .space {
-  height: 20px;
-  width: 100%;
-}
-
-#sub-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 40px;
-  border-bottom: 2px double black;
-
-  & #user {
+@media (min-width: 1024px) {
+  #title-container {
     display: flex;
-    width: 22%;
+    justify-content: center;
+    margin: 9.23px 0;
+  }
+  #title {
+    display: flex;
+    padding: 16.615px 24.922px;
+    align-items: center;
+    justify-content: center;
+    gap: 9.23px;
+    background: var(--Primary2, #002043);
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 29.537px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 1123px;
+  }
+  #content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 102px 9.23px 102px;
+    margin-left: 76px;
+    justify-content: center;
+    align-items: start;
+    background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
+  }
+  #left-section {
+    display: flex;
+    flex-direction: column;
+  }
+  #student-section {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    gap: 17px;
+    padding: 9.67px 0;
+    border-radius: 8px;
     align-items: center;
   }
-}
+  #right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  #header > .space {
+    height: 20px;
+    width: 100%;
+  }
+  #sub-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    border-bottom: 2px double black;
 
+    & #user {
+      display: flex;
+      width: 22%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #title-container {
+    display: flex;
+    justify-content: center;
+    margin: 9.23px 0;
+  }
+  #title {
+    display: flex;
+    padding: 16.615px 24.922px;
+    align-items: center;
+    justify-content: center;
+    gap: 9.23px;
+    background: var(--Primary2, #002043);
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 29.537px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 1123px;
+  }
+  #content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 102px 9.23px 102px;
+    margin-left: 76px;
+    justify-content: center;
+    align-items: start;
+    background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
+  }
+  #left-section {
+    display: flex;
+    flex-direction: column;
+  }
+  #student-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 17px;
+    padding: 9.67px 0;
+    border-radius: 8px;
+    align-items: center;
+  }
+  #right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  #header > .space {
+    height: 20px;
+    width: 100%;
+  }
+  #create-assignament {
+    display: none;
+  }
+  #sub-header {
+    display: flex;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid black;
+    & #user {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      gap: 2em;
+    }
+    & #testbread {
+      display: none;
+    }
+  }
+}
 @media (max-width: 768px) {
+  #title-container {
+    display: flex;
+    justify-content: center;
+    margin: 9.23px 0;
+  }
+  #title {
+    display: flex;
+    padding: 16.615px 24.922px;
+    align-items: center;
+    justify-content: center;
+    gap: 9.23px;
+    background: var(--Primary2, #002043);
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 29.537px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 1123px;
+  }
+  #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
+  }
+  #left-section {
+    display: flex;
+    flex-direction: column;
+  }
+  #header > .space {
+    height: 20px;
+    width: 100%;
+  }
   #sub-header {
     margin: auto;
 
@@ -170,6 +271,24 @@ const irStudentList = () => {
   }
   #footer {
     display: none;
+  }
+  #create-assignament {
+    display: none;
+  }
+  #sub-header {
+    display: flex;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid black;
+    & #user {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      gap: 2em;
+    }
+    & #testbread {
+      display: none;
+    }
   }
 }
 

@@ -118,7 +118,7 @@ const irGoodMainPage = () => {
     display: none;
   }
   #content-2 {
-    margin-top: 4em;
+    margin-top: 8em;
     & .form-container {
       display: flex;
       flex-direction: column;
@@ -159,7 +159,8 @@ const irGoodMainPage = () => {
     display: none;
   }
   #content-2 {
-    margin-top: 4em;
+    margin: 0 3px;
+    margin-top: 10em;
     & .form-container {
       display: flex;
       flex-direction: column;

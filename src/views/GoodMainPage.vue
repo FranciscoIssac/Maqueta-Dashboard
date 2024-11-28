@@ -12,6 +12,7 @@ import SubjectHeader from "@/components/SubjectHeader.vue";
 import SubjectCard from "@/components/SubjectCard.vue";
 import CalendarioResumen from "@/components/CalendarioResumen.vue";
 import CustomButton from "@/components/CustomButton.vue";
+import Button from "../components/AcceptButton.vue";
 
 import { useRouter } from "vue-router";
 
@@ -33,7 +34,7 @@ const irSubjectPage = () => {
     </div>
 
     <div id="sub-header">
-      <TestBread>
+      <TestBread id="testbread">
         <template #first>Inicio</template>
       </TestBread>
       <div id="user">
@@ -93,6 +94,7 @@ const irSubjectPage = () => {
               </template>
             </SubjectCard>
           </div>
+          <Button id="mobile-button"></Button>
         </div>
       </div>
     </div>
@@ -108,12 +110,10 @@ const irSubjectPage = () => {
   #right-content {
     width: 825px;
   }
-
   #tablero {
     margin-right: 18px;
     height: 665px;
   }
-
   #title {
     color: #000;
     height: 44px;
@@ -123,7 +123,6 @@ const irSubjectPage = () => {
     font-weight: 400;
     line-height: normal;
   }
-
   #content {
     display: flex;
     padding: 16px 102px 80px 101px;
@@ -131,12 +130,10 @@ const irSubjectPage = () => {
     align-items: center;
     background: var(--Background, linear-gradient(180deg, #bec7d3 0%, #fff 0%));
   }
-
   #header > .space {
     height: 20px;
     width: 100%;
   }
-
   #sub-header {
     display: flex;
     justify-content: space-between;
@@ -149,6 +146,9 @@ const irSubjectPage = () => {
       justify-content: space-between;
       align-items: center;
     }
+  }
+  #mobile-button {
+    display: none;
   }
   #backgorund {
     background: var(
@@ -168,11 +168,9 @@ const irSubjectPage = () => {
   #tablero {
     display: none;
   }
-
   #title {
     display: none;
   }
-
   #content {
     display: flex;
     padding: 50px 0;
@@ -183,23 +181,29 @@ const irSubjectPage = () => {
       width: 100%;
     }
   }
-
   #header > .space {
     height: 20px;
     width: 100%;
   }
-
   #sub-header {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
-    border-bottom: 2px double black;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid black;
     & #user {
       display: flex;
-      width: 22%;
-      justify-content: space-between;
-      align-items: center;
+      width: 100%;
+      justify-content: center;
+      gap: 2em;
     }
+    & #testbread {
+      display: none;
+    }
+  }
+  #mobile-button {
+    width: 20em;
+    justify-content: center;
+    margin: 2em auto;
   }
   #backgorund {
     background: var(
@@ -215,18 +219,15 @@ const irSubjectPage = () => {
   #right-content {
     width: 100%;
   }
-
   #calendarioresumen {
     display: none;
   }
   #tablero {
     display: none;
   }
-
   #title {
     display: none;
   }
-
   #content {
     display: flex;
     padding: 50px 0;
@@ -237,12 +238,15 @@ const irSubjectPage = () => {
       width: 100%;
     }
   }
-
   #header > .space {
     height: 20px;
     width: 100%;
   }
-
+  #mobile-button {
+    width: 8em;
+    justify-content: center;
+    margin: 2em auto;
+  }
   #backgorund {
     background: var(
       --Background,
@@ -250,8 +254,15 @@ const irSubjectPage = () => {
     );
   }
   #sub-header {
-    margin: auto;
-
+    display: flex;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid black;
+    & #user {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+    }
     & #testbread {
       display: none;
     }
